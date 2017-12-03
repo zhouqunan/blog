@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+    
+    </style>
+  </head>
+  <body>
+      <%- include header %>
+      <form>
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="SEARCH" name="keyword">
+              <span class="input-group-btn">
+                  <input type="submit" value="搜索" class="btn btn-default" />
+              </span>
+          </div>
+      </form>
+      
+      <ul class="list-group">
+           <li class="list-group-item">
+               <h3><a href="#">学习node.js</a></h3>
+               <p class="info">
+                   <span>作者：周去难</span>
+                   <span>|</span>
+                   <span>日期：2017-12-13</span>
+               </p>
+           </li>
+           <hr>
+      </ul>
+  </body>
+</html>
