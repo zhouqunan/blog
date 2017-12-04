@@ -75,3 +75,454 @@
 2017-12-04T19:29:31.030+0800 I STORAGE  [serviceShutdown] WiredTigerKVEngine shutting down
 2017-12-04T19:29:31.168+0800 I STORAGE  [serviceShutdown] shutdown: removing fs lock...
 2017-12-04T19:29:31.169+0800 I CONTROL  [serviceShutdown] now exiting
+2017-12-04T22:26:55.341+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-04T22:26:57.309+0800 I CONTROL  [main] Trying to install Windows service 'mongo'
+2017-12-04T22:26:57.325+0800 I CONTROL  [main] Service 'mongo' (mongo) installed with command line 'D:\mongodb\bin\mongod.exe --port 20001 --logpath D:\workspace\blog\db\mongodb.log --logappend --dbpath D:\workspace\blog\db --directoryperdb --service'
+2017-12-04T22:26:57.325+0800 I CONTROL  [main] Service can be started from the command line with 'net start mongo'
+2017-12-04T22:27:17.443+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-04T22:27:17.948+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten] MongoDB starting : pid=5816 port=20001 dbpath=D:\workspace\blog\db 64-bit host=BUSH
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten] modules: none
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten] build environment:
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-04T22:27:17.949+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\workspace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\workspace\blog\db\mongodb.log" } }
+2017-12-04T22:27:17.963+0800 I -        [initandlisten] Detected data files in D:\workspace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-04T22:27:17.963+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3526M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-04T22:27:17.971+0800 E STORAGE  [initandlisten] WiredTiger error (0) [1512397637:970369][5816:140731375245008], file:WiredTiger.wt, connection: WiredTiger.turtle: encountered an illegal file format or internal value
+2017-12-04T22:27:17.971+0800 E STORAGE  [initandlisten] WiredTiger error (-31804) [1512397637:970369][5816:140731375245008], file:WiredTiger.wt, connection: the process must exit and restart: WT_PANIC: WiredTiger library panic
+2017-12-04T22:27:17.971+0800 I -        [initandlisten] Fatal Assertion 28558 at src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp 361
+2017-12-04T22:27:17.971+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2017-12-04T22:27:38.965+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\stacktrace_windows.cpp(239)                     mongo::printStackTrace+0x43
+2017-12-04T22:27:38.965+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(180)            mongo::`anonymous namespace'::printSignalAndBacktrace+0x74
+2017-12-04T22:27:38.965+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(236)            mongo::`anonymous namespace'::abruptQuit+0x85
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     raise+0x1e7
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     abort+0x31
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:27:38.966+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:27:38.967+0800 I CONTROL  [initandlisten] sechost.dll                                                                      LsaFreeMemory+0x1c2
+2017-12-04T22:27:38.967+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                     BaseThreadInitThunk+0x14
+2017-12-04T22:27:38.967+0800 F -        [initandlisten] Got signal: 22 (SIGABRT).
+2017-12-04T22:27:38.967+0800 I CONTROL  [initandlisten] *** unhandled exception 0x0000000E at 0x00007FFE90363C58, terminating
+2017-12-04T22:27:38.967+0800 I CONTROL  [initandlisten] *** stack trace for unhandled exception:
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] KERNELBASE.dll                                                                     RaiseException+0x68
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\signal_handlers_synchronous.cpp(237)            mongo::`anonymous namespace'::abruptQuit+0x9d
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       raise+0x1e7
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       abort+0x31
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:27:39.017+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] sechost.dll                                                                        LsaFreeMemory+0x1c2
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                       BaseThreadInitThunk+0x14
+2017-12-04T22:27:39.018+0800 I -        [initandlisten] 
+2017-12-04T22:27:39.018+0800 I CONTROL  [initandlisten] writing minidump diagnostic file D:\mongodb\bin\mongod.2017-12-04T14-27-39.mdmp
+2017-12-04T22:27:39.960+0800 I CONTROL  [initandlisten] *** immediate exit due to unhandled exception
+2017-12-04T22:29:09.067+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-04T22:29:09.541+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-04T22:29:09.542+0800 I CONTROL  [initandlisten] MongoDB starting : pid=3672 port=20001 dbpath=D:\workspace\blog\db 64-bit host=BUSH
+2017-12-04T22:29:09.542+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-04T22:29:09.542+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-04T22:29:09.542+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-04T22:29:09.542+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-04T22:29:09.542+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-04T22:29:09.542+0800 I CONTROL  [initandlisten] modules: none
+2017-12-04T22:29:09.542+0800 I CONTROL  [initandlisten] build environment:
+2017-12-04T22:29:09.542+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-04T22:29:09.543+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-04T22:29:09.543+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-04T22:29:09.543+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\workspace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\workspace\blog\db\mongodb.log" } }
+2017-12-04T22:29:09.546+0800 I -        [initandlisten] Detected data files in D:\workspace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-04T22:29:09.547+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3526M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-04T22:29:09.553+0800 E STORAGE  [initandlisten] WiredTiger error (0) [1512397749:552811][3672:140731375245008], file:WiredTiger.wt, connection: WiredTiger.turtle: encountered an illegal file format or internal value
+2017-12-04T22:29:09.553+0800 E STORAGE  [initandlisten] WiredTiger error (-31804) [1512397749:552811][3672:140731375245008], file:WiredTiger.wt, connection: the process must exit and restart: WT_PANIC: WiredTiger library panic
+2017-12-04T22:29:09.553+0800 I -        [initandlisten] Fatal Assertion 28558 at src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp 361
+2017-12-04T22:29:09.553+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\stacktrace_windows.cpp(239)                     mongo::printStackTrace+0x43
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(180)            mongo::`anonymous namespace'::printSignalAndBacktrace+0x74
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(236)            mongo::`anonymous namespace'::abruptQuit+0x85
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     raise+0x1e7
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     abort+0x31
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:29:09.702+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] sechost.dll                                                                      LsaFreeMemory+0x1c2
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                     BaseThreadInitThunk+0x14
+2017-12-04T22:29:09.703+0800 F -        [initandlisten] Got signal: 22 (SIGABRT).
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] *** unhandled exception 0x0000000E at 0x00007FFE90363C58, terminating
+2017-12-04T22:29:09.703+0800 I CONTROL  [initandlisten] *** stack trace for unhandled exception:
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] KERNELBASE.dll                                                                     RaiseException+0x68
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\signal_handlers_synchronous.cpp(237)            mongo::`anonymous namespace'::abruptQuit+0x9d
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       raise+0x1e7
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       abort+0x31
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:29:09.754+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] sechost.dll                                                                        LsaFreeMemory+0x1c2
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                       BaseThreadInitThunk+0x14
+2017-12-04T22:29:09.755+0800 I -        [initandlisten] 
+2017-12-04T22:29:09.755+0800 I CONTROL  [initandlisten] writing minidump diagnostic file D:\mongodb\bin\mongod.2017-12-04T14-29-09.mdmp
+2017-12-04T22:29:09.886+0800 I CONTROL  [initandlisten] *** immediate exit due to unhandled exception
+2017-12-04T22:30:29.385+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-04T22:30:29.871+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten] MongoDB starting : pid=9012 port=20001 dbpath=D:\workspace\blog\db 64-bit host=BUSH
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten] modules: none
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten] build environment:
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-04T22:30:29.872+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\workspace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\workspace\blog\db\mongodb.log" } }
+2017-12-04T22:30:29.875+0800 I -        [initandlisten] Detected data files in D:\workspace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-04T22:30:29.875+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3526M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-04T22:30:29.882+0800 E STORAGE  [initandlisten] WiredTiger error (0) [1512397829:882078][9012:140731375245008], file:WiredTiger.wt, connection: WiredTiger.turtle: encountered an illegal file format or internal value
+2017-12-04T22:30:29.882+0800 E STORAGE  [initandlisten] WiredTiger error (-31804) [1512397829:882078][9012:140731375245008], file:WiredTiger.wt, connection: the process must exit and restart: WT_PANIC: WiredTiger library panic
+2017-12-04T22:30:29.882+0800 I -        [initandlisten] Fatal Assertion 28558 at src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp 361
+2017-12-04T22:30:29.882+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2017-12-04T22:30:30.016+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\stacktrace_windows.cpp(239)                     mongo::printStackTrace+0x43
+2017-12-04T22:30:30.016+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(180)            mongo::`anonymous namespace'::printSignalAndBacktrace+0x74
+2017-12-04T22:30:30.016+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(236)            mongo::`anonymous namespace'::abruptQuit+0x85
+2017-12-04T22:30:30.016+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     raise+0x1e7
+2017-12-04T22:30:30.016+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     abort+0x31
+2017-12-04T22:30:30.016+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:30:30.016+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:30:30.017+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:30:30.018+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:30:30.018+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:30:30.018+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:30:30.018+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:30:30.018+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:30:30.018+0800 I CONTROL  [initandlisten] sechost.dll                                                                      LsaFreeMemory+0x1c2
+2017-12-04T22:30:30.018+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                     BaseThreadInitThunk+0x14
+2017-12-04T22:30:30.018+0800 F -        [initandlisten] Got signal: 22 (SIGABRT).
+2017-12-04T22:30:30.018+0800 I CONTROL  [initandlisten] *** unhandled exception 0x0000000E at 0x00007FFE90363C58, terminating
+2017-12-04T22:30:30.018+0800 I CONTROL  [initandlisten] *** stack trace for unhandled exception:
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] KERNELBASE.dll                                                                     RaiseException+0x68
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\signal_handlers_synchronous.cpp(237)            mongo::`anonymous namespace'::abruptQuit+0x9d
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       raise+0x1e7
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       abort+0x31
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:30:30.072+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] sechost.dll                                                                        LsaFreeMemory+0x1c2
+2017-12-04T22:30:30.073+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                       BaseThreadInitThunk+0x14
+2017-12-04T22:30:30.073+0800 I -        [initandlisten] 
+2017-12-04T22:30:30.074+0800 I CONTROL  [initandlisten] writing minidump diagnostic file D:\mongodb\bin\mongod.2017-12-04T14-30-30.mdmp
+2017-12-04T22:30:30.188+0800 I CONTROL  [initandlisten] *** immediate exit due to unhandled exception
+2017-12-04T22:34:42.699+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-04T22:34:43.172+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-04T22:34:43.173+0800 I CONTROL  [initandlisten] MongoDB starting : pid=9908 port=20001 dbpath=D:\workspace\blog\db 64-bit host=BUSH
+2017-12-04T22:34:43.173+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-04T22:34:43.173+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-04T22:34:43.173+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-04T22:34:43.173+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-04T22:34:43.174+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-04T22:34:43.174+0800 I CONTROL  [initandlisten] modules: none
+2017-12-04T22:34:43.174+0800 I CONTROL  [initandlisten] build environment:
+2017-12-04T22:34:43.174+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-04T22:34:43.174+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-04T22:34:43.174+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-04T22:34:43.174+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\workspace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\workspace\blog\db\mongodb.log" } }
+2017-12-04T22:34:43.174+0800 W -        [initandlisten] Detected unclean shutdown - D:\workspace\blog\db\mongod.lock is not empty.
+2017-12-04T22:34:43.177+0800 I -        [initandlisten] Detected data files in D:\workspace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-04T22:34:43.177+0800 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2017-12-04T22:34:43.177+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3526M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-04T22:34:43.183+0800 E STORAGE  [initandlisten] WiredTiger error (0) [1512398083:183136][9908:140731375245008], file:WiredTiger.wt, connection: WiredTiger.turtle: encountered an illegal file format or internal value
+2017-12-04T22:34:43.183+0800 E STORAGE  [initandlisten] WiredTiger error (-31804) [1512398083:183136][9908:140731375245008], file:WiredTiger.wt, connection: the process must exit and restart: WT_PANIC: WiredTiger library panic
+2017-12-04T22:34:43.183+0800 I -        [initandlisten] Fatal Assertion 28558 at src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp 361
+2017-12-04T22:34:43.183+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2017-12-04T22:34:43.335+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\stacktrace_windows.cpp(239)                     mongo::printStackTrace+0x43
+2017-12-04T22:34:43.335+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(180)            mongo::`anonymous namespace'::printSignalAndBacktrace+0x74
+2017-12-04T22:34:43.335+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(236)            mongo::`anonymous namespace'::abruptQuit+0x85
+2017-12-04T22:34:43.335+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     raise+0x1e7
+2017-12-04T22:34:43.335+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     abort+0x31
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] sechost.dll                                                                      LsaFreeMemory+0x1c2
+2017-12-04T22:34:43.336+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                     BaseThreadInitThunk+0x14
+2017-12-04T22:34:43.336+0800 F -        [initandlisten] Got signal: 22 (SIGABRT).
+2017-12-04T22:34:43.337+0800 I CONTROL  [initandlisten] *** unhandled exception 0x0000000E at 0x00007FFE90363C58, terminating
+2017-12-04T22:34:43.337+0800 I CONTROL  [initandlisten] *** stack trace for unhandled exception:
+2017-12-04T22:34:43.395+0800 I CONTROL  [initandlisten] KERNELBASE.dll                                                                     RaiseException+0x68
+2017-12-04T22:34:43.395+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\signal_handlers_synchronous.cpp(237)            mongo::`anonymous namespace'::abruptQuit+0x9d
+2017-12-04T22:34:43.395+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       raise+0x1e7
+2017-12-04T22:34:43.395+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       abort+0x31
+2017-12-04T22:34:43.395+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:34:43.395+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:34:43.396+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] sechost.dll                                                                        LsaFreeMemory+0x1c2
+2017-12-04T22:34:43.397+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                       BaseThreadInitThunk+0x14
+2017-12-04T22:34:43.397+0800 I -        [initandlisten] 
+2017-12-04T22:34:43.398+0800 I CONTROL  [initandlisten] writing minidump diagnostic file D:\mongodb\bin\mongod.2017-12-04T14-34-43.mdmp
+2017-12-04T22:34:43.462+0800 I CONTROL  [initandlisten] *** immediate exit due to unhandled exception
+2017-12-04T22:46:05.079+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-04T22:46:05.560+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-04T22:46:05.561+0800 I CONTROL  [initandlisten] MongoDB starting : pid=7736 port=20001 dbpath=D:\workspace\blog\db 64-bit host=BUSH
+2017-12-04T22:46:05.561+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-04T22:46:05.561+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-04T22:46:05.561+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-04T22:46:05.561+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-04T22:46:05.561+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-04T22:46:05.562+0800 I CONTROL  [initandlisten] modules: none
+2017-12-04T22:46:05.562+0800 I CONTROL  [initandlisten] build environment:
+2017-12-04T22:46:05.562+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-04T22:46:05.562+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-04T22:46:05.562+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-04T22:46:05.562+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\workspace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\workspace\blog\db\mongodb.log" } }
+2017-12-04T22:46:05.565+0800 I -        [initandlisten] Detected data files in D:\workspace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-04T22:46:05.565+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3526M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-04T22:46:05.573+0800 E STORAGE  [initandlisten] WiredTiger error (0) [1512398765:572894][7736:140731375245008], file:WiredTiger.wt, connection: WiredTiger.turtle: encountered an illegal file format or internal value
+2017-12-04T22:46:05.573+0800 E STORAGE  [initandlisten] WiredTiger error (-31804) [1512398765:572894][7736:140731375245008], file:WiredTiger.wt, connection: the process must exit and restart: WT_PANIC: WiredTiger library panic
+2017-12-04T22:46:05.573+0800 I -        [initandlisten] Fatal Assertion 28558 at src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp 361
+2017-12-04T22:46:05.573+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\stacktrace_windows.cpp(239)                     mongo::printStackTrace+0x43
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(180)            mongo::`anonymous namespace'::printSignalAndBacktrace+0x74
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\signal_handlers_synchronous.cpp(236)            mongo::`anonymous namespace'::abruptQuit+0x85
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     raise+0x1e7
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                     abort+0x31
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:46:05.711+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] mongod.exe    ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] sechost.dll                                                                      LsaFreeMemory+0x1c2
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                     BaseThreadInitThunk+0x14
+2017-12-04T22:46:05.712+0800 F -        [initandlisten] Got signal: 22 (SIGABRT).
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] *** unhandled exception 0x0000000E at 0x00007FFE90363C58, terminating
+2017-12-04T22:46:05.712+0800 I CONTROL  [initandlisten] *** stack trace for unhandled exception:
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] KERNELBASE.dll                                                                     RaiseException+0x68
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\signal_handlers_synchronous.cpp(237)            mongo::`anonymous namespace'::abruptQuit+0x9d
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       raise+0x1e7
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] ucrtbase.dll                                                                       abort+0x31
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\assert_util.cpp(172)                            mongo::fassertFailedWithLocation+0x181
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_util.cpp(361)       mongo::`anonymous namespace'::mdb_handle_error+0x205
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(275)              __wt_eventv+0x376
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(317)              __wt_err+0x32
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\support\err.c(541)              __wt_illegal_value+0x6a
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_turtle.c(288)         __wt_turtle_read+0x2ab
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(280)          __wt_metadata_search+0x28e
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(269)        __conn_btree_config_set+0x22
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_dhandle.c(340)        __wt_conn_btree_open+0x68
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(543)  __wt_session_get_btree+0x113
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(535)  __wt_session_get_btree+0x1d5
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_dhandle.c(348)  __wt_session_get_btree_ckpt+0xc4
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\cursor\cur_file.c(567)          __wt_curfile_open+0x1dd
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(388)      __session_open_cursor_int+0x2f7
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\session\session_api.c(443)      __wt_open_cursor+0x1b
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\meta\meta_table.c(91)           __wt_metadata_cursor+0x99
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\third_party\wiredtiger\src\conn\conn_api.c(2489)           wiredtiger_open+0xb09
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp(272)  mongo::WiredTigerKVEngine::WiredTigerKVEngine+0x942
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\storage\wiredtiger\wiredtiger_init.cpp(91)        mongo::`anonymous namespace'::WiredTigerFactory::create+0x12f
+2017-12-04T22:46:05.765+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\service_context_d.cpp(202)                        mongo::ServiceContextMongoD::initializeGlobalStorageEngine+0x59c
+2017-12-04T22:46:05.766+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(599)                                       mongo::`anonymous namespace'::_initAndListen+0x77b
+2017-12-04T22:46:05.766+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\db\db.cpp(841)                                       mongo::`anonymous namespace'::initAndListen+0x27
+2017-12-04T22:46:05.766+0800 I CONTROL  [initandlisten] mongod.exe      ...\src\mongo\util\ntservice.cpp(560)                              mongo::ntservice::initService+0x53
+2017-12-04T22:46:05.766+0800 I CONTROL  [initandlisten] sechost.dll                                                                        LsaFreeMemory+0x1c2
+2017-12-04T22:46:05.766+0800 I CONTROL  [initandlisten] KERNEL32.DLL                                                                       BaseThreadInitThunk+0x14
+2017-12-04T22:46:05.766+0800 I -        [initandlisten] 
+2017-12-04T22:46:05.767+0800 I CONTROL  [initandlisten] writing minidump diagnostic file D:\mongodb\bin\mongod.2017-12-04T14-46-05.mdmp
+2017-12-04T22:46:05.839+0800 I CONTROL  [initandlisten] *** immediate exit due to unhandled exception
