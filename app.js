@@ -53,14 +53,14 @@ app.use(function(err, req, res, next) {
 });
 
 //session存到数据库中
-app.use(session({
-	secret:setting.cookieSecret, //session加密字符串
-	key: setting.db, //cookie name
-	cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}, //30 days
-	store: new MongoStore({
-		db: setting.db,
-		host: setting.host,
-		port: setting.port
-	  })
-}))
+// app.use(session({
+// 	secret:setting.cookieSecret, //session加密字符串
+// 	key: setting.db, //cookie name
+// 	cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}, //30 days
+// 	store: new MongoStore({
+// 		db: setting.db,
+// 		host: setting.host,
+// 		port: setting.port
+// 	  })
+// }))
 module.exports = app;
