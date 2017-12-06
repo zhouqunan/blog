@@ -7,12 +7,10 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var setting = require('./setting');
 var flash = require('connect-flash');
 //创建会话支持
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
-console.log(session);
 
 //创建app应用
 var app = express();
@@ -52,13 +50,13 @@ app.use(function(err, req, res, next) {
 	res.render('error');
 });
 
-//session存到数据库中
+// // session存到数据库中
 // app.use(session({
 // 	secret:setting.cookieSecret, //session加密字符串
 // 	key: setting.db, //cookie name
 // 	cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}, //30 days
 // 	store: new MongoStore({
-// 		db: setting.db,
+// 		url: 'mongodb://localhost/'+setting.db,
 // 		host: setting.host,
 // 		port: setting.port
 // 	  })

@@ -12,6 +12,10 @@ router.get('/register', function(req, res, next) {
   res.render('register', { title: '注册' });
 });
 
+router.post('/register', function(req, res, next) {
+  console.log(req.body);
+});
+
 //登录
 router.get('/login', function(req, res, next) {
   res.render('login', { title: '登录' });
