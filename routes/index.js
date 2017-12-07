@@ -54,5 +54,28 @@ router.get('/login', function(req, res, next) {
   res.render('login', { title: '登录' });
 });
 
-
+router.post('/login',function(req, res, next){
+  //储存密码
+  var password = req.body.password;
+  User.findOne({'username':req.body.username},function(err,data){
+    //错误则跳转
+    if(err) {
+      console.log(err);
+      return res.redirect('/login');
+    }
+    //不存在则跳转
+    if(!data){
+      console.log('用户不存在');
+      return res.redirect('/login');
+    }
+    //验证密码是否一致
+    if(data.password != password){
+      console.log('密码不一致');
+      return res.redirect('/login');
+    }
+    console.log('登陆成功：'+data.username);
+    //req.flash('success','登录成功');
+    return res.redirect('/');
+  })
+})
 module.exports = router;
