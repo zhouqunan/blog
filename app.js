@@ -12,6 +12,8 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
+var setting = require('./setting');
+
 //创建app应用
 var app = express();
 
@@ -21,12 +23,25 @@ app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(flash());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// session存到数据库中
+app.use(session({
+	secret:'blog', //session加密字符串
+	name: 'blog', //cookie name
+	cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}, //30 days
+	//指定储存空间为mongodb
+	store: new MongoStore({
+		url: setting.mongodb,
+	}), 
+	resave: false,
+	saveUninitialized: true
+}))
 
 app.use('/', index);
 app.use('/users', users);
@@ -50,15 +65,4 @@ app.use(function(err, req, res, next) {
 	res.render('error');
 });
 
-// // session存到数据库中
-// app.use(session({
-// 	secret:setting.cookieSecret, //session加密字符串
-// 	key: setting.db, //cookie name
-// 	cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}, //30 days
-// 	store: new MongoStore({
-// 		url: 'mongodb://localhost/'+setting.db,
-// 		host: setting.host,
-// 		port: setting.port
-// 	  })
-// }))
 module.exports = app;

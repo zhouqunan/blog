@@ -50,7 +50,6 @@ router.post('/register', function(req, res, next) {
 
 //登录
 router.get('/login', function(req, res, next) {
-    
   res.render('login', { title: '登录' });
 });
 
@@ -61,21 +60,27 @@ router.post('/login',function(req, res, next){
     //错误则跳转
     if(err) {
       console.log(err);
+      req.flash('error','登录出错');
       return res.redirect('/login');
     }
     //不存在则跳转
     if(!data){
       console.log('用户不存在');
+      req.flash('error','用户不存在');
       return res.redirect('/login');
     }
     //验证密码是否一致
     if(data.password != password){
       console.log('密码不一致');
+      req.flash('error','密码不一致');
       return res.redirect('/login');
     }
     console.log('登陆成功：'+data.username);
-    //req.flash('success','登录成功');
-    return res.redirect('/');
+    //将登陆信息存储到session中
+    console.log(req.session);
+    req.session.user = data;
+    req.flash('success','登录成功');
+    res.redirect('/');
   })
 })
 module.exports = router;
