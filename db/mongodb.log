@@ -734,3 +734,118 @@
 ***aborting after fassert() failure
 
 
+2017-12-11T09:07:50.096+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-11T09:08:40.828+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-11T09:08:40.829+0800 I CONTROL  [initandlisten] MongoDB starting : pid=3060 port=20001 dbpath=D:\gameWorkSpace\blog\db 64-bit host=hztuenui1
+2017-12-11T09:08:40.829+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-11T09:08:40.829+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-11T09:08:40.829+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-11T09:08:40.829+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-11T09:08:40.829+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-11T09:08:40.829+0800 I CONTROL  [initandlisten] modules: none
+2017-12-11T09:08:40.829+0800 I CONTROL  [initandlisten] build environment:
+2017-12-11T09:08:40.830+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-11T09:08:40.830+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-11T09:08:40.830+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-11T09:08:40.830+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\gameWorkSpace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\gameWorkSpace\blog\db\mongodb.log" } }
+2017-12-11T09:08:40.834+0800 I -        [initandlisten] Detected data files in D:\gameWorkSpace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-11T09:08:40.835+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3579M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-11T09:08:40.874+0800 E STORAGE  [initandlisten] WiredTiger error (22) [1512954520:874084][3060:140728145830224], file:WiredTiger.wt, connection: Error parsing '<<<<<<< HEAD' at offset 0: Unexpected character: Invalid argument
+2017-12-11T09:08:40.876+0800 I -        [initandlisten] Fatal Assertion 28561 at src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp 273
+2017-12-11T09:08:40.877+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2017-12-11T09:10:15.529+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-11T09:10:20.723+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-11T09:10:20.725+0800 I CONTROL  [initandlisten] MongoDB starting : pid=3980 port=20001 dbpath=D:\gameWorkSpace\blog\db 64-bit host=hztuenui1
+2017-12-11T09:10:20.725+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-11T09:10:20.725+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-11T09:10:20.725+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-11T09:10:20.726+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-11T09:10:20.726+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-11T09:10:20.726+0800 I CONTROL  [initandlisten] modules: none
+2017-12-11T09:10:20.726+0800 I CONTROL  [initandlisten] build environment:
+2017-12-11T09:10:20.726+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-11T09:10:20.726+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-11T09:10:20.726+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-11T09:10:20.726+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\gameWorkSpace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\gameWorkSpace\blog\db\mongodb.log" } }
+2017-12-11T09:10:20.733+0800 I -        [initandlisten] Detected data files in D:\gameWorkSpace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-11T09:10:20.736+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3579M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-11T09:10:20.785+0800 E STORAGE  [initandlisten] WiredTiger error (22) [1512954620:784871][3980:140705752047952], file:WiredTiger.wt, connection: Error parsing '<<<<<<< HEAD' at offset 0: Unexpected character: Invalid argument
+2017-12-11T09:10:20.787+0800 I -        [initandlisten] Fatal Assertion 28561 at src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp 273
+2017-12-11T09:10:20.788+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2017-12-12T09:10:47.695+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-12T09:10:51.080+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-12T09:10:51.081+0800 I CONTROL  [initandlisten] MongoDB starting : pid=3916 port=20001 dbpath=D:\gameWorkSpace\blog\db 64-bit host=hztuenui1
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten] modules: none
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten] build environment:
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-12T09:10:51.082+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\gameWorkSpace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\gameWorkSpace\blog\db\mongodb.log" } }
+2017-12-12T09:10:51.086+0800 I -        [initandlisten] Detected data files in D:\gameWorkSpace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-12T09:10:51.088+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3579M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-12T09:10:51.124+0800 E STORAGE  [initandlisten] WiredTiger error (22) [1513041051:123944][3916:140717615767888], file:WiredTiger.wt, connection: Error parsing '<<<<<<< HEAD' at offset 0: Unexpected character: Invalid argument
+2017-12-12T09:10:51.126+0800 I -        [initandlisten] Fatal Assertion 28561 at src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp 273
+2017-12-12T09:10:51.126+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2017-12-12T19:49:19.513+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-12T19:49:23.568+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-12T19:49:23.569+0800 I CONTROL  [initandlisten] MongoDB starting : pid=3744 port=20001 dbpath=D:\gameWorkSpace\blog\db 64-bit host=hztuenui1
+2017-12-12T19:49:23.569+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-12T19:49:23.569+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-12T19:49:23.569+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-12T19:49:23.569+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-12T19:49:23.569+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-12T19:49:23.569+0800 I CONTROL  [initandlisten] modules: none
+2017-12-12T19:49:23.570+0800 I CONTROL  [initandlisten] build environment:
+2017-12-12T19:49:23.570+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-12T19:49:23.570+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-12T19:49:23.570+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-12T19:49:23.570+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\gameWorkSpace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\gameWorkSpace\blog\db\mongodb.log" } }
+2017-12-12T19:49:23.574+0800 I -        [initandlisten] Detected data files in D:\gameWorkSpace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-12T19:49:23.575+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3579M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-12T19:49:23.597+0800 E STORAGE  [initandlisten] WiredTiger error (22) [1513079363:597414][3744:140713826345296], file:WiredTiger.wt, connection: Error parsing '<<<<<<< HEAD' at offset 0: Unexpected character: Invalid argument
+2017-12-12T19:49:23.600+0800 I -        [initandlisten] Fatal Assertion 28561 at src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp 273
+2017-12-12T19:49:23.600+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
+2017-12-12T20:05:23.338+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-12T20:05:27.466+0800 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten] MongoDB starting : pid=3924 port=20001 dbpath=D:\gameWorkSpace\blog\db 64-bit host=hztuenui1
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten] modules: none
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten] build environment:
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-12-12T20:05:27.467+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-12T20:05:27.468+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-12T20:05:27.468+0800 I CONTROL  [initandlisten] options: { net: { port: 20001 }, service: true, storage: { dbPath: "D:\gameWorkSpace\blog\db", directoryPerDB: true }, systemLog: { destination: "file", logAppend: true, path: "D:\gameWorkSpace\blog\db\mongodb.log" } }
+2017-12-12T20:05:27.472+0800 I -        [initandlisten] Detected data files in D:\gameWorkSpace\blog\db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-12T20:05:27.472+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3579M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-12T20:05:27.496+0800 E STORAGE  [initandlisten] WiredTiger error (22) [1513080327:496490][3924:140733285491024], file:WiredTiger.wt, connection: Error parsing '<<<<<<< HEAD' at offset 0: Unexpected character: Invalid argument
+2017-12-12T20:05:27.498+0800 I -        [initandlisten] Fatal Assertion 28561 at src\mongo\db\storage\wiredtiger\wiredtiger_kv_engine.cpp 273
+2017-12-12T20:05:27.498+0800 I -        [initandlisten] 
+
+***aborting after fassert() failure
+
+
