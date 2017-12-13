@@ -270,4 +270,13 @@ router.get('/delete', function(req, res, next) {
   })
   
 });
+//个人信息
+router.get('/self', function(req, res, next) {
+  res.render('self', { 
+    title: '个人信息',
+    user:req.session.user,
+    error:req.flash('error'),
+    success:req.flash('success'),
+  });
+});
 module.exports = router;
