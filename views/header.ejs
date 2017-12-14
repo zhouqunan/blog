@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title><%= title %> - Blog</title>
     <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/fonts/glyphicons-halflings-regular.ttf"> -->
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/font-awesome.css">
     <script src="/javascripts/jquery-3.1.1.min.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>
     
@@ -22,7 +22,7 @@
             <a class="navbar-brand" href="/self">作品集</a>
             <ul class="nav navbar-nav navbar-right">
                 <% if(user){ %>
-                <li><a title="发表文章" href="/post">发表文章</a></li>
+                <li><a href="/post"><span class="glyphicon glyphicon-edit"></span>发表文章</a></li>
                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>登出</a></li>
                 
                 <%}else{%>
@@ -49,5 +49,6 @@
             <% } %>
         </div>
     </div>
+</div>
     <hr />
 <div class="col-sm-12">
