@@ -7,7 +7,26 @@
     });
 </script>
 <!-- //Swipe-Box-JavaScript -->
-
+<!-- Gallery-Tab-JavaScript -->
+<script src="/javascripts/cbpFWTabs.js"></script>
+<script>
+    (function() {
+        [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+            new CBPFWTabs( el );
+        });
+    })();
+</script>
+<!-- //Gallery-Tab-JavaScript -->
+<!-- scrolling script -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script> 
+<!-- //scrolling script -->
 <!-- Scrolling Nav JavaScript --> 
 <script src="/javascripts/scrolling-nav.js"></script>  
 <!-- //fixed-scroll-nav-js --> 

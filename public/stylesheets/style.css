@@ -90,7 +90,7 @@ transition:.5s all;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
-  background-color: #11b563;
+  background-color: #1d070b;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #FFF;
@@ -98,7 +98,7 @@ transition:.5s all;
 }
 .navbar-default .navbar-nav > li>a:hover {
   color: #fff;
-  background: #11b563;
+  background: #1d070b;
 }
 nav.navbar.navbar-default.navbar-fixed-top.top-nav-collapse {
   padding: 1em 10em;
@@ -112,7 +112,7 @@ nav.navbar.navbar-default.navbar-fixed-top.top-nav-collapse {
 
 /*-- banner --*/
 .banner{
-background: url(../images/1.png) no-repeat 0px 0px;
+background: url(../images/1.jpg) no-repeat 0px 0px;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -447,7 +447,7 @@ ul.address li ul.agileits-address-text li {
 .wthree span{
 font-weight:bold;
   font-size: 32px;
-  color: #11b563;
+  color: #1d070b;
 }
 .modal .about {
   border-top: 1px solid;
@@ -485,7 +485,7 @@ font-weight:bold;
 }
 b, strong {
   font-weight: bold;
-  color: #11b563;
+  color: #1d070b;
 }
 .about-modal.wthree {
   padding: 2em 4em;
@@ -732,7 +732,7 @@ padding:5em 0;
 .education-agile-w3l-year {
   width: 30%;
   float: left;
-  border: 1px solid #11b563;
+  border: 1px solid #1d070b;
   border-bottom: transparent;
   padding: 4.64em 2em;
 }
@@ -740,11 +740,11 @@ padding:5em 0;
   width: 70%;
   float: left;
   padding: 2em 2em;
-  border-top: 1px solid #11b563;
-  border-right: 1px solid #11b563;
+  border-top: 1px solid #1d070b;
+  border-right: 1px solid #1d070b;
 }
 .last {
-  border-bottom: 1px solid #11b563;
+  border-bottom: 1px solid #1d070b;
 }
 .education-agile-w3l-year h4,.education-agile-w3l-info  h4 {
   font-size: 25px;
@@ -773,7 +773,7 @@ h3.w3l_head.three {
 i.fa.fa-hourglass-end {
   font-size: 210px;
   margin-top: 2em;
-  color: #11b563;
+  color: #1d070b;
 }
 .middle {
   text-align: center;
@@ -892,7 +892,7 @@ i.fa.fa-hourglass-end {
   .content-wrap section p {
     margin: 0;
     padding: 0.75em 0;
-    color: rgba(40,44,42,0.05);
+    color: rgba(12, 65, 38, 0.05);
     font-weight: 900;
     /*--w3layouts--*/
     /*--agileits--*/
@@ -946,7 +946,7 @@ i.fa.fa-hourglass-end {
   }
 
   .tabs-style-bar nav ul li.tab-current a {
-    background: #11b563;
+    background: #1d070b;
     color: #fff;
   }
 
@@ -1161,7 +1161,7 @@ text-decoration:none;
   border: none;
   outline: none;
   color: #fff;
-  background: #11b563;
+  background: #1d070b;
   font-size: 16px;
   padding: 10px 40px;
 }
@@ -1240,7 +1240,7 @@ iframe {
   text-transform: uppercase;
 }
 .copyright-agile a {
-  color: #11b563;
+  color: #1d070b;
 }
 .copyright-agile a:hover{
   color: #fff;
@@ -1506,7 +1506,7 @@ h1 a.navbar-brand {
 }
 .navbar-toggle {
   border-radius: 0px;
-  background: #11b563;
+  background: #1d070b;
   margin-right: 0;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -1706,7 +1706,7 @@ ul.top-links li a i.fa {
   padding: 2em;
 }
 .education-agile-w3l-info {
-  border-left: 1px solid #11b563;
+  border-left: 1px solid #1d070b;
 }
 .gallery-top figure.effect-bubba h4 {
   padding-top: 2%;
